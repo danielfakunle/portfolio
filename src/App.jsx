@@ -6,27 +6,28 @@ import Footer from "./components/Footer";
 import ModalContext from "./context/ModalContext";
 import DesignModal from "./components/DesignModal";
 import { useContext, useEffect } from "react";
+import { images } from "./assets";
 
 function App() {
   const techStack = {
-    HTML: "src/assets/icons8-html-5.svg",
-    CSS: "src/assets/icons8-css3.svg",
-    JavaScript: "src/assets/icons8-javascript.svg",
-    Java: "src/assets/icons8-java.svg",
-    "C Lang": "src/assets/icons8-c-programming.svg",
-    "Tailwind CSS": "src/assets/icons8-tailwindcss.svg",
-    React: "src/assets/icons8-react-native.svg",
-    NodeJS: "src/assets/icons8-nodejs.svg",
-    PostgreSQL: "src/assets/icons8-postgresql.svg",
-    Figma: "src/assets/icons8-figma.svg",
-    Photoshop: "src/assets/icons8-adobe-photoshop.svg",
+    HTML: images.html5Icon,
+    CSS: images.css3Icon,
+    JavaScript: images.javascriptIcon,
+    Java: images.javaIcon,
+    "C Lang": images.clangIcon,
+    "Tailwind CSS": images.tailwindIcon,
+    React: images.reactIcon,
+    NodeJS: images.nodejsIcon,
+    PostgreSQL: images.postgresqlIcon,
+    Figma: images.figmaicon,
+    Photoshop: images.photoshop,
   };
 
   const contactIcons = {
-    "United States": "./src/assets/map-pin.svg",
-    Email: "./src/assets/envelope.svg",
-    LinkedIn: "./src/assets/linkedin.svg",
-    Github: "./src/assets/github.svg",
+    "United States": images.mapPin,
+    Email: images.envelope,
+    LinkedIn: images.linkedinIcon,
+    Github: images.github,
   };
 
   const contactLinks = {

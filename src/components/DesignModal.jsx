@@ -1,27 +1,11 @@
 import { useContext, useState } from "react";
 import ModalContext from "../context/ModalContext";
 import { AnimatePresence, motion } from "framer-motion";
+import { images } from "../assets";
 
 function DesignModal() {
   const { modalIsOpen, setModalIsOpen } = useContext(ModalContext);
   const [designInView, setDesignInView] = useState("desktop");
-
-  // {designInView === "desktop" ? (
-  //   <img
-  //     className={`w-[clamp(100%,100%,fit-content)]`}
-  //     src="./src/assets/photobank-desktop.png"
-  //   />
-  // ) : designInView === "tablet" ? (
-  //   <img
-  //     className="w-[clamp(100%,100%,fit-content)]"
-  //     src="./src/assets/photobank-tablet.png"
-  //   />
-  // ) : (
-  //   <img
-  //     className="w-[clamp(100%,100%,fit-content)]"
-  //     src="./src/assets/photobank-mobile.png"
-  //   />
-  // )}
 
   const modalVariants = {
     hidden: { display: "none", opacity: 0 },
@@ -70,8 +54,8 @@ function DesignModal() {
               <img
                 className=" cursor-pointer"
                 onClick={() => setModalIsOpen(false)}
-                src="./src/assets/close.svg"
-                alt=""
+                src={images.close}
+                alt="close"
               />
             </div>
             <div className="h-[calc(0.4*100vh)] md:h-[calc(0.6*100vh)] p-6 overflow-auto grid justify-center">
@@ -84,7 +68,8 @@ function DesignModal() {
                 >
                   <img
                     className={`w-[clamp(100%,100%,fit-content)]`}
-                    src="./src/assets/photobank-desktop.png"
+                    src={images.photobankDesktop}
+                    alt="PhotoBank Desktop"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -97,7 +82,8 @@ function DesignModal() {
                 >
                   <img
                     className="w-[clamp(100%,100%,fit-content)]"
-                    src="./src/assets/photobank-tablet.png"
+                    src={images.photobankTablet}
+                    alt="PhotoBank Tablet"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -110,7 +96,8 @@ function DesignModal() {
                 >
                   <img
                     className="w-[clamp(100%,100%,fit-content)]"
-                    src="./src/assets/photobank-mobile.png"
+                    src={images.photobankMobile}
+                    alt="PhotoBank Mobile"
                   />
                 </motion.div>
               </AnimatePresence>
