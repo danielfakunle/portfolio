@@ -3,8 +3,19 @@ import ProjectCard from "./ProjectCard";
 import FadeIn from "./FadeIn";
 
 function Projects({ techStack }) {
-  const projectImages = [images.photobankImage];
-
+  const projectImages = [images.photobankImage, images.smartlabImage];
+  const projectInfo = {
+    photobank: {
+      title: "PhotoBank",
+      subtitle: "UI Design",
+      desc: "PhotoBank is an stock photography website where users can choose from a large library of stock photos and videos.",
+    },
+    smartlab: {
+      title: "SmartLab",
+      subtitle: "UI Design, Full Stack Dev",
+      desc: "SmartLab is an AI sandbox where users can explore different AI models. V1.0 will feature the face detection model powered by Clarifai. It also features a ranking system where users can compare their engagement with others.",
+    },
+  };
   return (
     <div
       id="projects"
@@ -21,7 +32,24 @@ function Projects({ techStack }) {
           </h4>
         </div>
       </FadeIn>
-      <div className="w-full">
+      <div className="w-full flex flex-col space-y-16">
+        <ProjectCard
+          image={projectImages[1]}
+          usedTech={{
+            React: techStack.React,
+            "Tailwind CSS": Object.values(techStack)[5],
+            NodeJS: techStack.NodeJS,
+            PostgreSQL: techStack.PostgreSQL,
+            Figma: techStack.Figma,
+            Photoshop: Object.values(techStack)[10],
+          }}
+          type={"software-dev"}
+          info={projectInfo.smartlab}
+          orientation={"normal"}
+          site={"https://smart-lab.netlify.app/"}
+          code={"https://github.com/danielfakunle/smartlab"}
+          inDev={true}
+        />
         <ProjectCard
           image={projectImages[0]}
           usedTech={{
@@ -29,6 +57,8 @@ function Projects({ techStack }) {
             Photoshop: Object.values(techStack)[10],
           }}
           type={"ui-design"}
+          info={projectInfo.photobank}
+          orientation={"alternate"}
         />
       </div>
       <FadeIn>

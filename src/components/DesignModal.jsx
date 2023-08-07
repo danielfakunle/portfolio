@@ -30,7 +30,7 @@ function DesignModal() {
             }}
           >
             <div className="p-6 flex flex-row justify-between border-b border-gray-300">
-              <div className="flex flex-col space-y-1 items-start md:flex-row md:space-x-8 text-gray-900">
+              <div className="flex flex-col space-y-1 items-start md:flex-row md:items-center md:space-x-8 text-gray-900">
                 <p className="font-semibold">PhotoBank Designs</p>
                 <button
                   className={`${designInView === "desktop" && "text-sky-500"}`}

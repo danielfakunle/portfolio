@@ -20,5 +20,8 @@ import photobankDesktop from "./photobank-desktop.png"
 import photobankImage from "./photobank-image.png"
 import photobankMobile from "./photobank-mobile.png"
 import photobankTablet from "./photobank-tablet.png"
+import popupIcon from "./popup-icon.svg"
+import smartlabImage from "./smartlab-image.png"
+import inDev from "./in-dev.svg"
 
-export default {arrowRight, close, envelope, github, photoshop, clangIcon, css3Icon, figmaicon, html5Icon, javaIcon, javascriptIcon, nodejsIcon, postgresqlIcon, reactIcon, tailwindIcon, linkedinIcon, mapPin, tooltipTriangle, photobankDesktop, photobankImage, photobankMobile, photobankTablet};
+export default {arrowRight, close, envelope, github, photoshop, clangIcon, css3Icon, figmaicon, html5Icon, javaIcon, javascriptIcon, nodejsIcon, postgresqlIcon, reactIcon, tailwindIcon, linkedinIcon, mapPin, tooltipTriangle, photobankDesktop, photobankImage, photobankMobile, photobankTablet, popupIcon, smartlabImage, inDev};
