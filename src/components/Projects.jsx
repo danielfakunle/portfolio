@@ -38,7 +38,7 @@ function Projects({ techStack }) {
           usedTech={{
             React: techStack.React,
             TypeScript: techStack.TypeScript,
-            'Tailwind CSS': Object.values(techStack)[5],
+            'Tailwind CSS': Object.values(techStack)[6],
             NodeJS: techStack.NodeJS,
             PostgreSQL: techStack.PostgreSQL,
             Figma: techStack.Figma,
